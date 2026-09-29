@@ -216,12 +216,46 @@
   .stat strong { display: block; font-size: clamp(24px, 2.8vw, 32px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; color: var(--lime); }
   .stat span { display: block; margin-top: 8px; font-size: 14px; color: var(--on-dark-muted); line-height: 1.4; }
 
+  /* ---------- "O QUE FICOU" — CAIXA VERDE COM LISTA ---------- */
   .lesson {
-    margin-top: 24px; padding: 18px 22px; border-radius: 12px;
-    background: var(--lime-soft); color: var(--text); font-size: 16px;
-    display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: baseline;
+    margin-top: 24px;
+    padding: 22px 26px 24px;
+    border-radius: 12px;
+    background: var(--lime-soft);
+    color: var(--text);
   }
-  .lesson b { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--lime-ink); white-space: nowrap; }
+  .lesson .lesson-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--lime-ink);
+    margin-bottom: 14px;
+  }
+  .lesson ul {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+  }
+  .lesson li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 12px;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+  .lesson li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-top: 9px;
+    border-radius: 50%;
+    background: var(--lime-ink);
+    flex-shrink: 0;
+  }
+  .lesson li b { color: var(--ink); font-weight: 700; }
 
   /* ---------- PRINCIPLES ---------- */
   .principles { background: var(--ink); color: var(--on-dark); }
@@ -293,7 +327,8 @@
     .proof div, .proof div + div { padding: 24px 16px 24px 0; border-left: 0; }
     .proof div:nth-child(even) { padding-left: 16px; border-left: 1px solid rgba(255,255,255,0.1); }
     .proof div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,0.1); }
-    .lesson { grid-template-columns: 1fr; gap: 6px; }
+    .lesson { padding: 18px 20px; }
+    .lesson li { font-size: 14.5px; }
     body.img .contact-plain { grid-template-columns: 1fr; gap: 20px; }
     .timeline::before { left: 5px; }
     .timeline li { grid-template-columns: 1fr; padding-left: 32px; gap: 4px; }
@@ -384,7 +419,7 @@
           <p class="case-product">Produto: <b>Trava de Capacetes Fixa</b> · desenvolvida na TeckLock</p>
         </div>
         <div class="case-img">
-<img src="./img/capacetes" alt="Trava de capacetes fixa instalada">
+          <img src="./img/capacetes" alt="Trava de capacetes fixa instalada">
         </div>
       </div>
 
@@ -411,13 +446,17 @@
         <div class="stat"><strong>200</strong><span>unidades piloto aprovadas</span></div>
         <div class="stat"><strong>Zero</strong><span>reclamações em campo</span></div>
       </div>
-<p class="lesson"><b>O que ficou</b></p>
-<ul style="margin-top: 4px; padding-left: 20px; color: var(--muted); font-size: 15px;">
-  <li>Mais habilidades de identificar as necessidades e limitações dos prestadores de serviço e solucioná-las.</li>
-  <li>Insira aqui a sua segunda informação nova sobre o projeto.</li>
-  <li>Insira aqui a sua terceira informação nova.</li>
-</ul>
 
+      <div class="lesson">
+        <span class="lesson-label">O que ficou</span>
+        <ul>
+          <li>Desenvolvi a habilidade de <b>identificar as necessidades e limitações de um prestador de serviço</b> e solucioná-las para tornar o projeto viável.</li>
+          <li>Aprendi que <b>aproximação com o fornecedor</b> — entender processo, equipe e restrições — define se um item é inviável ou não.</li>
+          <li>Aprendi muito com <b>operadores de chão de fábrica</b>: os melhores insights do projeto vieram dessa comunicação direta.</li>
+          <li>Restrição em projeto virou sinônimo de <b>solução criativa e mais lucrativa</b> — não de limite.</li>
+        </ul>
+      </div>
+    </article>
 
     <!-- CASE 02 -->
     <article class="case" id="case-2">
@@ -433,7 +472,7 @@
           <p class="case-product">Produto: <b>Fechadura Tubular</b></p>
         </div>
         <div class="case-img">
-       <img src="./img/fechadura" alt="Fechadura tubular">
+          <img src="./img/fechadura" alt="Fechadura tubular">
         </div>
       </div>
 
@@ -461,7 +500,15 @@
         <div class="stat"><strong>100%</strong><span>da cadeia nacional, menos SKUs</span></div>
       </div>
 
-      <p class="lesson"><b>O que ficou</b><span>Dá para vencer o custo do concorrente asiático — com projeto bem feito, não com volume. E um produto pensado para evoluir vive mais tempo no mercado.</span></p>
+      <div class="lesson">
+        <span class="lesson-label">O que ficou</span>
+        <ul>
+          <li>Aprendi que <b>muitas tecnologias ainda são subestimadas pela grande indústria</b> — e que isso abre espaço para quem está atento.</li>
+          <li>Percebi o quanto um produto precisa ser <b>dinâmico em sua construção</b> para aumentar o ciclo de vida no mercado.</li>
+          <li>Entendi que <b>alinhar o produto aos objetivos futuros da empresa</b> não é detalhe — é o que garante longevidade ao projeto.</li>
+          <li>Aprendi que <b>ainda é possível superar custos de concorrentes asiáticos</b> quando o projeto é bem feito, não só quando há volume.</li>
+        </ul>
+      </div>
     </article>
 
     <!-- CASE 03 -->
@@ -478,7 +525,7 @@
           <p class="case-product">Produto: <b>Trava de Manopla</b></p>
         </div>
         <div class="case-img">
-<img src="./img/manopla" alt="Trava de manopla">
+          <img src="./img/manopla" alt="Trava de manopla">
         </div>
       </div>
 
@@ -506,7 +553,15 @@
         <div class="stat"><strong>Menos SKUs</strong><span>com a fechadura padronizada</span></div>
       </div>
 
-      <p class="lesson"><b>O que ficou</b><span>Reduzir custo depende mais de atenção contínua ao processo e às pessoas do que de tecnologia cara.</span></p>
+      <div class="lesson">
+        <span class="lesson-label">O que ficou</span>
+        <ul>
+          <li>Aprendi que a <b>frustração de uma equipe</b> pode estar ligada à sensação de ineficiência de um processo — e que isso impacta direto a cultura de produtividade.</li>
+          <li>Percebi que a <b>produtividade e a qualidade</b> de um produto são regidas pela forma como o operador enxerga o fruto do seu trabalho.</li>
+          <li>Entendi que <b>todo processo pode ser melhorado</b> — manual ou mecânico. A questão é como, quando e a que preço.</li>
+          <li>Aprendi que redução de custo depende mais de <b>monitoria e foco contínuo</b> do que de alta tecnologia — é parar e refletir sobre processos, restrições e pessoas.</li>
+        </ul>
+      </div>
     </article>
   </div>
 </section>
